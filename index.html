@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Autodestructivo</title>
+    <style>
+        #mensaje {
+            display: none;
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            position: relative;
+        }
+        #eliminarBtn {
+            margin-top: 10px;
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="mostrarLink">Haz clic para ver el mensaje</a>
+    
+    <div id="mensaje">
+        <p>Te estarás preguntando  , ¿Qué esta pasando ahora?
+Bueno la respuestas es que descubrí de ti lo que yo temía; que me mientes.
+¿Cómo, así…¿En qué te mentí?. Pues no me dijiste la verdad sobre tu torta de cumpleaños, descubrí que te la regalo tu amiga Ana, asunto que tu lo negaste cuando hace días atrás te lo pregunte. Parece algo insignificante pero pone en dudas sobre la certeza de muchas cosas que me has dicho sobre otras cuestiones que largamente hemos conversado. Seguramente tienes una explicación lógica sobre esto, pero yo decidí no escucharla y poner en dudas las demás cosas que me has dicho. Te deseo mucho éxito en tu vida, cuidate mucho. Y recuerda algo dicho por ti ayer (“Las mentiras tienen patas cortas”).
+, eliminalo por favor!</p>
+        <button id="eliminarBtn">Eliminar Mensaje</button>
+    </div>
+
+    <script>
+        document.getElementById('mostrarLink').addEventListener('click', function(e) {
+            e.preventDefault(); // Evita que el enlace recargue la página
+            document.getElementById('mensaje').style.display = 'block';
+        });
+
+        document.getElementById('eliminarBtn').addEventListener('click', function() {
+            document.getElementById('mensaje').style.display = 'none';
+            // Opcional: También puedes eliminar el mensaje del DOM completamente
+            // document.getElementById('mensaje').remove();
+        });
+    </script>
+</body>
+</html>
